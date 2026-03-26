@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import styles from "../styles/Nav.module.css";
 
 // Add more dog images here when you have them
@@ -116,14 +116,17 @@ export default function Sidebar() {
         {/* social icons at bottom */}
         <div className={styles.socials}>
           {/* TODO: Replace with your social media links */}
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/zshuhanzz/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={18} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://ca.linkedin.com/in/shuhan-zhang-21260927a" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={18} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/zshuhanzz" target="_blank" rel="noopener noreferrer">
             <FaGithub size={18} />
+          </a>
+          <a href="mailto:sshhuu135@gmail.com">
+            <FaEnvelope size={18} />
           </a>
         </div>
       </nav>
