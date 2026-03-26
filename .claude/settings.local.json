@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:\\\\Users\\\\shuha\\\\OneDrive\\\\Documents\\\\p_web\" log --oneline -10)",
+      "Bash(npx create-next-app@14:*)"
+    ]
+  }
+}

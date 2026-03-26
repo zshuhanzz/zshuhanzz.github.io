@@ -1,0 +1,96 @@
+/* ======================== */
+/* Life Page                */
+/* ======================== */
+
+.lifePage {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 30px 40px 60px;
+  transition: background 0.3s;
+}
+
+.lifeHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.backLink {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--accent-hover);
+}
+
+.lifeTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.lifeSubtitle {
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+/* masonry collage */
+.collage {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.photoItem {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.photoItem:hover {
+  transform: rotate(0deg) scale(1.02) !important;
+}
+
+.photoFrame {
+  width: 100%;
+  border-radius: 4px;
+  border: 4px solid white;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .collage {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .collage {
+    column-count: 1;
+  }
+
+  .lifePage {
+    padding: 20px;
+  }
+}

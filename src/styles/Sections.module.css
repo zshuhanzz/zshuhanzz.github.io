@@ -1,0 +1,375 @@
+/* ======================== */
+/* Hero / Home Section      */
+/* ======================== */
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.heroSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.heroName {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+}
+
+.heroTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 3px;
+}
+
+.scrollArrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  animation: bounce 2s ease infinite;
+  transition: color 0.2s;
+}
+
+.scrollArrow:hover {
+  color: var(--accent);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(12px);
+  }
+}
+
+/* ======================== */
+/* Section Heading (shared) */
+/* ======================== */
+
+.sectionHeading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ======================== */
+/* About Section            */
+/* ======================== */
+
+.aboutText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.aboutLink {
+  color: var(--accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.aboutLink:hover {
+  color: var(--accent-hover);
+}
+
+.aboutLabel {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aboutLabel::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+}
+
+.aboutImagePlaceholder {
+  width: 100%;
+  height: 350px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  border: 2px dashed var(--sidebar-border);
+}
+
+/* ======================== */
+/* Experiences Section      */
+/* ======================== */
+
+.terminalWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.terminal {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1a1a2e;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.terminalBar {
+  background: #2d2d4a;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.terminalDots {
+  display: flex;
+  gap: 6px;
+}
+
+.dotRed {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.dotYellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffbd2e;
+}
+
+.dotGreen {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #28c840;
+}
+
+.terminalPath {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.terminalBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1px;
+}
+
+.terminalCell {
+  background: #1a1a2e;
+  padding: 30px 25px;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.terminalCell:hover {
+  box-shadow: inset 0 0 20px rgba(0, 255, 65, 0.15), 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+.cellIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cellCompany {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 4px;
+}
+
+.cellPosition {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #00ff41;
+  margin-bottom: 10px;
+}
+
+.cellDesc {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* ======================== */
+/* Projects Section         */
+/* ======================== */
+
+.projectCard {
+  position: relative;
+  border-radius: 12px;
+  padding: 3px;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    var(--accent),
+    transparent 30%,
+    transparent 70%,
+    var(--accent)
+  );
+  animation: rotateGradient 4s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateGradient {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.projectCardInner {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.projectImage {
+  width: 100%;
+  height: 180px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.projectInfo {
+  padding: 20px;
+}
+
+.projectTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.projectTech {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.projectDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.projectView {
+  color: var(--accent);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.projectView:hover {
+  color: var(--accent-hover);
+}
+
+/* ======================== */
+/* Life Button              */
+/* ======================== */
+
+.lifeButtonWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 80px;
+}
+
+.lifeButton {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px var(--glow);
+}
+
+.lifeButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px var(--glow);
+  color: var(--text-primary);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .heroName {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .heroTitle {
+    font-size: 1.1rem;
+  }
+
+  .terminalBody {
+    grid-template-columns: 1fr;
+  }
+}
