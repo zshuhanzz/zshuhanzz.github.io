@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import styles from "../styles/Nav.module.css";
 
@@ -16,41 +16,11 @@ const sections = [
 ];
 
 export default function Sidebar() {
-  const [activeSection, setActiveSection] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dogIndex, setDogIndex] = useState(0);
 
   const nextDog = useCallback(() => {
     setDogIndex((i) => (i + 1) % dogImages.length);
-  }, []);
-
-  // track which section is visible
-  useEffect(() => {
-    const observers = [];
-
-    const handleIntersect = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const options = { threshold: 0.3 };
-
-    // observe each section
-    ["home", "about", "experiences", "projects"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) {
-        const observer = new IntersectionObserver(handleIntersect, options);
-        observer.observe(el);
-        observers.push(observer);
-      }
-    });
-
-    return () => {
-      observers.forEach((obs) => obs.disconnect());
-    };
   }, []);
 
   const scrollTo = (id) => {
@@ -74,7 +44,7 @@ export default function Sidebar() {
       <nav className={`${styles.sidebar} ${mobileOpen ? styles.open : ""}`}>
         {/* home icon at the top */}
         <button
-          className={`${styles.homeIcon} ${activeSection === "home" ? styles.active : ""}`}
+          className={styles.homeIcon}
           onClick={() => scrollTo("home")}
         >
           <FaHome size={22} />
@@ -85,7 +55,7 @@ export default function Sidebar() {
           {sections.map((s) => (
             <button
               key={s.id}
-              className={`${styles.navLink} ${activeSection === s.id ? styles.active : ""}`}
+              className={styles.navLink}
               onClick={() => scrollTo(s.id)}
             >
               {s.label}
