@@ -105,7 +105,7 @@
 
 .aboutLabel {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 15px;
@@ -123,17 +123,16 @@
 }
 
 .aboutImage {
-  width: 100%;
-  height: 450px;
+  width: 320px;
+  height: 380px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   border-radius: 12px;
   display: block;
+  margin: 0;
 }
 
-/* ======================== */
 /* Experiences Section      */
-/* ======================== */
 
 .terminalWrapper {
   max-width: 900px;
