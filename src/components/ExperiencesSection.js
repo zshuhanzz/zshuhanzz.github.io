@@ -2,66 +2,59 @@
 
 import styles from "../styles/Sections.module.css";
 
-// TODO: Replace these with your actual experiences
 const experiences = [
   {
-    icon: "🏢",
-    company: "Company One",
+    company: "Teamcal AI",
+    icon: "/images/teamcal.png",
     position: "Software Engineering Intern",
-    description: "Coming soon...",
+    period: "2025",
+    description: "Supported the AI scheduling agent by building Python data pipelines with Pandas to process 14,000+ user availability records, handling time zones and scheduling patterns to reduce model training time and improve automated booking success",
   },
   {
-    icon: "💻",
-    company: "Company Two",
-    position: "Research Assistant",
-    description: "Coming soon...",
+    company: "Lillup",
+    icon: "/images/lillup.jpeg",
+    position: "Frontend Developer Intern",
+    period: "2025",
+    description: "Built Next.js/TypeScript components from Figma designs, maintained Jest and Cypress testing, and improved performance by up to 10% through Lighthouse based optimizations",
   },
   {
-    icon: "🔬",
-    company: "Company Three",
-    position: "Teaching Assistant",
-    description: "Coming soon...",
-  },
-  {
-    icon: "🚀",
-    company: "Company Four",
-    position: "Developer",
+    company: "Coming soon",
+    icon: null,
+    position: null,
+    period: null,
     description: "Coming soon...",
   },
 ];
 
 export default function ExperiencesSection() {
   return (
-    <div className={styles.terminalWrapper}>
-      <h2 className={styles.sectionHeading} style={{ marginBottom: "30px" }}>
+    <div className={styles.experiencesWrapper}>
+      <h2 className={styles.sectionHeading} style={{ marginBottom: "40px" }}>
         Experiences
       </h2>
 
-      {/* terminal window */}
-      <div className={styles.terminal}>
-        {/* title bar */}
-        <div className={styles.terminalBar}>
-          <div className={styles.terminalDots}>
-            <span className={styles.dotRed}></span>
-            <span className={styles.dotYellow}></span>
-            <span className={styles.dotGreen}></span>
-          </div>
-          <span className={styles.terminalPath}>
-            C:\Users\shuhan\experiences
-          </span>
-        </div>
-
-        {/* terminal body - 2x2 grid */}
-        <div className={styles.terminalBody}>
-          {experiences.map((exp, i) => (
-            <div key={i} className={styles.terminalCell}>
-              <div className={styles.cellIcon}>{exp.icon}</div>
-              <h4 className={styles.cellCompany}>{exp.company}</h4>
-              <p className={styles.cellPosition}>{exp.position}</p>
-              <p className={styles.cellDesc}>{exp.description}</p>
+      <div className={styles.experienceList}>
+        {experiences.map((exp, i) => (
+          <div key={i} className={styles.experienceItem}>
+            {exp.icon && (
+              <img
+                src={exp.icon}
+                alt={exp.company}
+                className={styles.experienceIcon}
+              />
+            )}
+            <div className={styles.experienceContent}>
+              <div className={styles.experienceMeta}>
+                <span className={styles.experienceCompany}>{exp.company}</span>
+                {exp.period && <span className={styles.experiencePeriod}>{exp.period}</span>}
+              </div>
+              {exp.position && (
+                <p className={styles.experiencePosition}>{exp.position}</p>
+              )}
+              <p className={styles.experienceDesc}>{exp.description}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
