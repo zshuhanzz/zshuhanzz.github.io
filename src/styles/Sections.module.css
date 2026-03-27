@@ -43,32 +43,6 @@
   letter-spacing: 3px;
 }
 
-.scrollArrow {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  background: none;
-  border: none;
-  color: var(--text-secondary);
-  cursor: pointer;
-  animation: bounce 2s ease infinite;
-  transition: color 0.2s;
-}
-
-.scrollArrow:hover {
-  color: var(--accent);
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(12px);
-  }
-}
 
 /* ======================== */
 /* Section Heading (shared) */
