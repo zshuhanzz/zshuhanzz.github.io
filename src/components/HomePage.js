@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+
 import styles from "../styles/Sections.module.css";
 
 // load the 3D scene only on client side (three.js needs the browser)

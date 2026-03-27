@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
+import { useState, useCallback } from "react";
+import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
+import styles from "../styles/Nav.module.css";
 
+// Add more dog images here when you have them
 const dogImages = [
   "/images/drip dog.png",
-  // add more dog image paths here later
 ];
-import styles from "../styles/Nav.module.css";
 
 const sections = [
   { id: "about", label: "About" },
@@ -16,41 +17,11 @@ const sections = [
 ];
 
 export default function Sidebar() {
-  const [activeSection, setActiveSection] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dogIndex, setDogIndex] = useState(0);
 
-  const cycleDog = () => {
-    setDogIndex((prev) => (prev + 1) % dogImages.length);
-  };
-
-  // track which section is visible
-  useEffect(() => {
-    const observers = [];
-
-    const handleIntersect = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const options = { threshold: 0.3 };
-
-    // observe each section
-    ["home", "about", "experiences", "projects"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) {
-        const observer = new IntersectionObserver(handleIntersect, options);
-        observer.observe(el);
-        observers.push(observer);
-      }
-    });
-
-    return () => {
-      observers.forEach((obs) => obs.disconnect());
-    };
+  const nextDog = useCallback(() => {
+    setDogIndex((i) => (i + 1) % dogImages.length);
   }, []);
 
   const scrollTo = (id) => {
@@ -74,7 +45,7 @@ export default function Sidebar() {
       <nav className={`${styles.sidebar} ${mobileOpen ? styles.open : ""}`}>
         {/* home icon at the top */}
         <button
-          className={`${styles.homeIcon} ${activeSection === "home" ? styles.active : ""}`}
+          className={styles.homeIcon}
           onClick={() => scrollTo("home")}
         >
           <FaHome size={22} />
@@ -85,7 +56,7 @@ export default function Sidebar() {
           {sections.map((s) => (
             <button
               key={s.id}
-              className={`${styles.navLink} ${activeSection === s.id ? styles.active : ""}`}
+              className={styles.navLink}
               onClick={() => scrollTo(s.id)}
             >
               {s.label}
@@ -116,14 +87,20 @@ export default function Sidebar() {
         {/* social icons at bottom */}
         <div className={styles.socials}>
           {/* TODO: Replace with your social media links */}
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/zshuhanzz/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={18} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://ca.linkedin.com/in/shuhan-zhang-21260927a" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={18} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/zshuhanzz" target="_blank" rel="noopener noreferrer">
             <FaGithub size={18} />
+          </a>
+          <a href="mailto:sshhuu135@gmail.com">
+            <FaEnvelope size={18} />
+          </a>
+          <a href="https://www.tiktok.com/@abysser11" target="_blank" rel="noopener noreferrer">
+            <SiTiktok size={18} />
           </a>
         </div>
       </nav>

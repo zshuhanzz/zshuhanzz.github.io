@@ -142,6 +142,37 @@
 }
 
 /* ======================== */
+/* Dog Image                */
+/* ======================== */
+
+.dogWrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+}
+
+.dogImage {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.dogWrapper:hover .dogImage {
+  transform: scale(1.05);
+}
+
+.dogCaption {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ======================== */
 /* Theme Toggle             */
 /* ======================== */
 

@@ -9,21 +9,22 @@ export default function AboutSection() {
       <Row className="align-items-center">
         <Col md={7}>
           <h2 className={styles.sectionHeading}>
-            Welcome!
+            Hello Beautiful People!
           </h2>
 
-          {/* TODO: Replace this with your actual bio/about text */}
           <p className={styles.aboutText}>
-            Coming soon...
+            My name is Shuhan. I am a computer science student at McMaster University. I enjoy building practical, impactful full stack applications and am always exploring new tools and technologies to improve how I build. And of course, I&apos;m excited to try on novel experiences and take on difficult challenges presented to me.
           </p>
 
-          {/* TODO: Add more paragraphs about yourself here */}
           <p className={styles.aboutText}>
-            Coming soon...
+            Outside of school, I&apos;m a big foodie, so I burn off the calories by going to the gym or playing my favorite sports, basketball and volleyball. One of my goals right now is to train plyometrics consistently and be able to dunk by the end of the year.
+          </p>
+          <p className={styles.aboutText}>
+            Also, I like making tiktok videos, not to get famous and rich, but just to show my friends a funnier side of me. If you want to watch me embarrass myself, feel free to check it out linked at the bottom left.
           </p>
 
           <a href="#projects" className={styles.aboutLink}>
-            &#10148; Check out my Projects!
+            My Projects!
           </a>
         </Col>
 
@@ -32,7 +33,7 @@ export default function AboutSection() {
 
           <img
             src="/images/websiteprofilepic.jpg"
-            alt="Shuhan Zhang"
+            alt="Profile"
             className={styles.aboutImage}
           />
         </Col>
