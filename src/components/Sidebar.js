@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 import styles from "../styles/Nav.module.css";
 
 // Add more dog images here when you have them
@@ -97,6 +98,9 @@ export default function Sidebar() {
           </a>
           <a href="mailto:sshhuu135@gmail.com">
             <FaEnvelope size={18} />
+          </a>
+          <a href="https://www.tiktok.com/@abysser11" target="_blank" rel="noopener noreferrer">
+            <SiTiktok size={18} />
           </a>
         </div>
       </nav>

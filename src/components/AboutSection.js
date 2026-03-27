@@ -24,7 +24,7 @@ export default function AboutSection() {
           </p>
 
           <a href="#projects" className={styles.aboutLink}>
-            &#10148; My Projects!
+            My Projects!
           </a>
         </Col>
 
