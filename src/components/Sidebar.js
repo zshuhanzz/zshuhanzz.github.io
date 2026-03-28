@@ -75,7 +75,7 @@ export default function Sidebar() {
         </div>
 
         {/* drip dog */}
-        <div className={styles.dogContainer} onClick={cycleDog}>
+        <div className={styles.dogContainer} onClick={nextDog}>
           <img
             src={dogImages[dogIndex]}
             alt="drip dog"

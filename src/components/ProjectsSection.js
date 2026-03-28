@@ -19,10 +19,11 @@ const projects = [
     link: "https://github.com",
   },
   {
-    title: "Project Three",
-    tech: "Next.js | Firebase | Bootstrap",
-    description: "Coming soon...",
-    link: "https://github.com",
+    title: "Automated Container Recycling System",
+    tech: "Python, SIL/HIL testing, Quanser",
+    description: "Built a real-time recycling system that uses sensor fusion to detect and sort containers, achieving reliable performance data across both simulation and physical hardware",
+    link: "https://github.com/zshuhanzz/Automated-Container-Recycling-System",
+    image: "/images/containervisual.png",
   },
   {
     title: "Project Four",
@@ -47,6 +48,7 @@ export default function ProjectsSection() {
               tech={project.tech}
               description={project.description}
               link={project.link}
+              image={project.image}
             />
           </Col>
         ))}

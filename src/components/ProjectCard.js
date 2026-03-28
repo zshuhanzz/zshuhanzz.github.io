@@ -2,13 +2,16 @@
 
 import styles from "../styles/Sections.module.css";
 
-export default function ProjectCard({ title, tech, description, link }) {
+export default function ProjectCard({ title, tech, description, link, image }) {
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectCardInner}>
-        {/* TODO: Replace this with an actual project screenshot */}
         <div className={styles.projectImage}>
-          <span>Project Image</span>
+          {image ? (
+            <img src={image} alt={title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          ) : (
+            <span>Project Image</span>
+          )}
         </div>
 
         <div className={styles.projectInfo}>
