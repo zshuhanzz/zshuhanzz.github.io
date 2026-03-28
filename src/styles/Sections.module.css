@@ -132,11 +132,11 @@
 .experienceItem::before {
   content: "";
   position: absolute;
-  left: -5px;
-  top: 28px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  left: -4px;
+  top: 24px;
+  width: 6px;
+  height: 35px;
+  border-radius: 1px;
   background: var(--accent);
 }
 
