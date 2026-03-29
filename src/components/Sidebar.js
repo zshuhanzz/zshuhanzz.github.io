@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import styles from "../styles/Nav.module.css";
@@ -63,15 +64,9 @@ export default function Sidebar() {
             </button>
           ))}
 
-          {/* TODO: Replace with your Google Drive resume link */}
-          <a
-            href="https://drive.google.com/your-resume-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.navLink}
-          >
-            Resume
-          </a>
+          <Link href="/life" className={`${styles.navLink} ${styles.lifeNavButton}`}>
+            My Life
+          </Link>
         </div>
 
         {/* drip dog */}
