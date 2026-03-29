@@ -18,6 +18,13 @@ const experiences = [
     description: "Built Next.js/TypeScript components from Figma designs, maintained Jest and Cypress testing, and improved performance by up to 10% through Lighthouse based optimizations",
   },
   {
+    company: "McMaster Engineering Society Sustainability Committee",
+    icon: "/images/MES.jpeg",
+    position: "Vice President of Finance",
+    period: "2024 - present",
+    description: "Managed budgeting and operations for sustainability-focused engineering initiatives, working closely with other committees to track expenses. Prepared and submitted financial reports to MES for funding approval",
+  },
+  {
     company: "Coming soon",
     icon: null,
     position: null,
