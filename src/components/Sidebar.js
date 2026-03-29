@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { FaHome, FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import styles from "../styles/Nav.module.css";
 
@@ -48,7 +48,7 @@ export default function Sidebar() {
           className={styles.homeIcon}
           onClick={() => scrollTo("home")}
         >
-          <FaHome size={22} />
+          <img src="/images/shuhan_logo.png" alt="logo" style={{ width: "60px", height: "60px", objectFit: "contain" }} />
         </button>
 
         {/* section links */}
