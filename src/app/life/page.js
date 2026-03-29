@@ -34,10 +34,10 @@ export default function LifePage() {
 
       <div className={styles.lifeHeader}>
         <Link href="/" className={styles.backLink}>
-          ← Back to Home
+          ← Back
         </Link>
         <h1 className={styles.lifeTitle}>Life</h1>
-        <p className={styles.lifeSubtitle}>moments & memories</p>
+        <p className={styles.lifeSubtitle}>a collection of my most precious moments and memories</p>
       </div>
 
       <div className={styles.collage}>

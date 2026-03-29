@@ -61,20 +61,6 @@
   display: block;
 }
 
-.lifeNavButton {
-  border: 1px solid var(--sidebar-border) !important;
-  background: var(--card-bg) !important;
-  color: var(--text-primary) !important;
-  box-shadow: 0 0 10px var(--glow);
-  text-align: center !important;
-  margin-top: 8px;
-}
-
-.lifeNavButton:hover {
-  transform: scale(1.04);
-  color: var(--text-primary) !important;
-  background: var(--card-bg) !important;
-}
 
 .navLink:hover,
 .navLink.active {

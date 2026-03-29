@@ -64,7 +64,7 @@ export default function Sidebar() {
             </button>
           ))}
 
-          <Link href="/life" className={`${styles.navLink} ${styles.lifeNavButton}`}>
+          <Link href="/life" className={styles.navLink}>
             My Life
           </Link>
         </div>
