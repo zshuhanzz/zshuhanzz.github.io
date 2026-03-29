@@ -2,13 +2,13 @@
 
 import styles from "../styles/Sections.module.css";
 
-export default function ProjectCard({ title, tech, description, link, image }) {
+export default function ProjectCard({ title, tech, description, link, image, imagePosition = "center" }) {
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectCardInner}>
         <div className={styles.projectImage}>
           {image ? (
-            <img src={image} alt={title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={image} alt={title} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: imagePosition }} />
           ) : (
             <span>Project Image</span>
           )}
@@ -19,7 +19,7 @@ export default function ProjectCard({ title, tech, description, link, image }) {
           <p className={styles.projectTech}>{tech}</p>
           <p className={styles.projectDesc}>{description}</p>
 
-          {/* TODO: Replace with your actual GitHub link */}
+          {/* Replace with the actual GitHub link */}
           <a
             href={link}
             target="_blank"

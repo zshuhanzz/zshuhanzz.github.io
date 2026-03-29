@@ -13,10 +13,12 @@ const projects = [
     link: "https://github.com/zshuhanzz/Tradealytics",
   },
   {
-    title: "Project Two",
-    tech: "Python | FastAPI | PostgreSQL",
-    description: "Coming soon...",
-    link: "https://github.com",
+    title: "My Mind",
+    tech: "React, TypeScript, Node.js, Express, PostgreSQL, Gemini API, Tailwind",
+    description: "Created an AI powered mental wellness app that integrates context aware chat, journaling, and mood tracking analytics. Used caching strategies to reduce response latency and improve user experience.",
+    link: "https://github.com/zshuhanzz/MyMind",
+    image: "/images/mymindvisual.png",
+    imagePosition: "top",
   },
   {
     title: "Automated Container Recycling System",
@@ -50,6 +52,7 @@ export default function ProjectsSection() {
               description={project.description}
               link={project.link}
               image={project.image}
+              imagePosition={project.imagePosition}
             />
           </Col>
         ))}
