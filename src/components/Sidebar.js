@@ -6,7 +6,7 @@ import { FaInstagram, FaLinkedin, FaGithub, FaBars, FaTimes, FaEnvelope } from "
 import { SiTiktok } from "react-icons/si";
 import styles from "../styles/Nav.module.css";
 
-// Add more dog images here when you have them
+// Add more dog images later
 const dogImages = [
   "/images/drip dog.png",
 ];

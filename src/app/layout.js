@@ -4,8 +4,8 @@ import ThemeProvider from "../components/ThemeProvider";
 import BootstrapClient from "../components/BootstrapClient";
 
 export const metadata = {
-  title: "Shuhan Zhang | Portfolio",
-  description: "Shuhan Zhang - Software Developer Portfolio",
+  title: "Shuhan Zhang - Personal website",
+  description: "Personal website for ",
 };
 
 export default function RootLayout({ children }) {

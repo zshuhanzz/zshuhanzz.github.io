@@ -1,31 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import ThemeToggle from "../../components/ThemeToggle";
 import styles from "../../styles/Life.module.css";
 
-// TODO: Replace these placeholders with your actual photos
-// For each photo:
-//   - Change height to whatever looks good
-//   - Replace "bg" color with an actual <img> tag
-//   - Edit or remove the caption
+// Ordered to distribute landscapes across columns for visual balance
+// landscape: p1, p4, p5, p11 | portrait: p2, p3, p6, p7, p8, p9, p10
 const photos = [
-  { height: 250, color: "#c4b5a2", caption: "caption" },
-  { height: 320, color: "#a8c5d6", caption: "caption" },
-  { height: 200, color: "#d4a5a5", caption: "" },
-  { height: 280, color: "#b5c4a8", caption: "caption" },
-  { height: 350, color: "#c5a8d4", caption: "caption" },
-  { height: 220, color: "#a8d4c5", caption: "" },
-  { height: 300, color: "#d4c5a8", caption: "caption" },
-  { height: 260, color: "#a8a8d4", caption: "" },
-  { height: 230, color: "#d4a8b5", caption: "caption" },
-  { height: 310, color: "#b5d4a8", caption: "caption" },
-  { height: 270, color: "#d4b5c5", caption: "" },
-  { height: 240, color: "#a8c5b5", caption: "caption" },
+  { src: "p1.jpg",  w: 2880, h: 2160, caption: "" }, // landscape — col 1
+  { src: "p2.jpg",  w: 1620, h: 2160, caption: "" }, // portrait  — col 2
+  { src: "p6.jpg",  w: 2160, h: 2880, caption: "" }, // portrait  — col 3
+  { src: "p3.jpg",  w: 1215, h: 1620, caption: "" }, // portrait  — col 1
+  { src: "p4.jpg",  w: 1440, h: 1080, caption: "" }, // landscape — col 2
+  { src: "p9.jpg",  w: 2160, h: 2880, caption: "" }, // portrait  — col 3
+  { src: "p7.jpg",  w: 1217, h: 2160, caption: "" }, // portrait  — col 1
+  { src: "p5.jpg",  w: 2880, h: 2160, caption: "" }, // landscape — col 2
+  { src: "p10.jpg", w: 2125, h: 2160, caption: "" }, // portrait  — col 3
+  { src: "p8.jpg",  w: 1620, h: 2160, caption: "" }, // portrait  — col 1
+  { src: "p11.jpg", w: 2880, h: 2160, caption: "" }, // landscape — col 2
 ];
 
-// slight rotations for scrapbook feel
-const rotations = [-2, 1, -1, 2, 0, -1.5, 1.5, -0.5, 1, -2, 0.5, -1];
+const rotations = [-1.5, 1, -1, 2, -0.5, 1.5, -2, 0.5, -1, 1, -1.5];
 
 export default function LifePage() {
   return (
@@ -47,15 +43,14 @@ export default function LifePage() {
             className={styles.photoItem}
             style={{ transform: `rotate(${rotations[i]}deg)` }}
           >
-            {/* TODO: Replace this div with an <img> tag pointing to your photo */}
-            <div
+            <Image
+              src={`/images/Life_pics/${photo.src}`}
+              alt={photo.caption || `photo ${i + 1}`}
+              width={photo.w}
+              height={photo.h}
               className={styles.photoFrame}
-              style={{
-                height: `${photo.height}px`,
-                background: photo.color,
-              }}
+              style={{ width: "100%", height: "auto" }}
             />
-            {/* Remove or edit this caption as needed */}
             {photo.caption && (
               <p className={styles.caption}>{photo.caption}</p>
             )}
