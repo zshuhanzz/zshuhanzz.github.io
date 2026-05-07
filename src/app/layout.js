@@ -5,7 +5,7 @@ import BootstrapClient from "../components/BootstrapClient";
 
 export const metadata = {
   title: "Shuhan Zhang - Personal website",
-  description: "Personal website for ",
+  description: "Personal website for me",
 };
 
 export default function RootLayout({ children }) {
