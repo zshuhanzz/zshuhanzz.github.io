@@ -22,14 +22,14 @@ const experiences = [
     icon: "/images/teamcal.png",
     position: "Full Stack Software Developer Intern",
     period: "May 2025 – Sep 2025",
-    description: "Supported the AI scheduling agent by building Python data pipelines with Pandas to process 14,000+ user availability records, handling time zones and scheduling patterns to reduce model training time and improve automated booking success",
+    description: "Built a full stack analytics dashboard with React and PHP to surface client meeting insights, cut P99 query latency by 37% through database optimizations, and improved automated booking success by 18% with additional scheduling logic.",
   },
   {
     company: "Lillup",
     icon: "/images/lillup.jpeg",
     position: "Frontend Developer Intern",
     period: "Mar 2025 – May 2025",
-    description: "Built Next.js/TypeScript components from Figma designs, maintained Jest and Cypress testing, and improved performance by up to 10% through Lighthouse based optimizations",
+    description: "Built and tested frontend components in Next.js and TypeScript from Figma designs, and improved overall performance by up to 10% through Lighthouse-driven optimizations.",
   },
   {
     company: "McMaster Engineering Society Sustainability Committee",
