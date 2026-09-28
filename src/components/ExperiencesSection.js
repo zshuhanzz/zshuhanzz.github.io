@@ -4,6 +4,20 @@ import styles from "../styles/Sections.module.css";
 
 const experiences = [
   {
+    company: "Zenai International",
+    icon: "/images/zenai_logo.png",
+    position: "Software Engineering Intern",
+    period: "May 2026 – Sep 2026",
+    description: "",
+  },
+  {
+    company: "AnswerX",
+    icon: "/images/answerx_logo.png",
+    position: "Software Engineering Intern",
+    period: "Jan 2026 – May 2026",
+    description: "",
+  },
+  {
     company: "Teamcal AI",
     icon: "/images/teamcal.png",
     position: "Software Engineering Intern",
