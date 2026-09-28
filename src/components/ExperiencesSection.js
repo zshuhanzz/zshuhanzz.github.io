@@ -18,17 +18,17 @@ const experiences = [
     description: "",
   },
   {
-    company: "Teamcal AI",
+    company: "ANCI AI",
     icon: "/images/teamcal.png",
-    position: "Software Engineering Intern",
-    period: "2025",
+    position: "Full Stack Software Developer Intern",
+    period: "May 2025 – Sep 2025",
     description: "Supported the AI scheduling agent by building Python data pipelines with Pandas to process 14,000+ user availability records, handling time zones and scheduling patterns to reduce model training time and improve automated booking success",
   },
   {
     company: "Lillup",
     icon: "/images/lillup.jpeg",
     position: "Frontend Developer Intern",
-    period: "2025",
+    period: "Mar 2025 – May 2025",
     description: "Built Next.js/TypeScript components from Figma designs, maintained Jest and Cypress testing, and improved performance by up to 10% through Lighthouse based optimizations",
   },
   {
