@@ -8,7 +8,7 @@ const experiences = [
     icon: "/images/zenai_logo.png",
     position: "Software Engineering Intern",
     period: "May 2026 – Sep 2026",
-    description: "",
+    description: "Worked across Zenai's backend to strengthen 63+ AI voice agents for automotive dealerships, tune a large-scale inventory crawler across 650K+ listings for a 14.4% speed boost, and build an ML model that cut vehicle price estimation error by 24.7% against KBB benchmarks.",
   },
   {
     company: "AnswerX",
