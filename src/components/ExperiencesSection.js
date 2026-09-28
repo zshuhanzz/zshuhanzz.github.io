@@ -15,7 +15,7 @@ const experiences = [
     icon: "/images/answerx_logo.png",
     position: "Software Engineering Intern",
     period: "Jan 2026 – May 2026",
-    description: "",
+    description: "Built infrastructure for AnswerX's GEO platform by expanding AI prompt tracing, cutting P95 load times by 30%. Shipped an AI powered content agent to generate client targeted articles that boosted AI visibility by 18.6%. And automated custom domain infrastructure on GCP with Terraform.",
   },
   {
     company: "ANCI AI",
